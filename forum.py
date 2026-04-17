@@ -189,6 +189,8 @@ def index():
         if username=="𰻞𰻞龘齉𱁬𪚥𠔻䨻䲜朤":
             ret+="<script>alert('CCCTF{嚴厲斥責你發瘋啦這什麼東西啦不可以啊不要再亂搞了啦不要再蝦幾把搞了啦你幹嘛這樣啊怎麼這麼激烈啊不可以這樣子啊發瘋了是不是啊啥小啦不要不可以不可以講什麼話啊操擊敗勒啦冷靜一點啦幹這到底又是什麼東西不可以啦這是能講的話嗎絕對不可以的啊}')</script>"
         return ret
+    else:
+        return redirect(url_for('login'))
         
 
     
