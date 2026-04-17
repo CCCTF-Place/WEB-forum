@@ -1,0 +1,12 @@
+services:
+  web_forum:
+    build: .
+#    image: web-forum-web_forum:latest
+    ports:
+      - "${CHALLENGE_BIND_IP}:5000:5000"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
