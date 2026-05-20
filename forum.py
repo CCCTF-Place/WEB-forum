@@ -511,10 +511,10 @@ def user_info(username):
                     <body>
                         <div class="container">
                             <h1>👤 用戶資料</h1>
-                            <img src='/static/user_avatar/{user[0]}.png' class="user-avatar" onerror="this.src='/static/user_avatar/default.png'">
+                            <img src='/static/user_avatar/{escape(user[0])}.png' class="user-avatar" onerror="this.src='/static/user_avatar/default.png'">
                             <div class="info-box">
-                                <p><span class="label">用戶名稱：</span> {user[0]}</p>
-                                <p><span class="label">自定義圖片路徑：</span> {user[2]}</p>
+                                <p><span class="label">用戶名稱：</span> {escape(user[0])}</p>
+                                <p><span class="label">自定義圖片路徑：</span> {escape(user[2])}</p>
                             </div>
                             <a href="/" class="back-btn">返回首頁</a>
                         </div>
@@ -748,7 +748,7 @@ def search_user():
 
                     '''
                     for user in users:
-                        html += f"<li><a href='/user/{user[0]}'>{escape(user[0])}</a></li>"
+                        html += f"<li><a href='/user/{escape(user[0])}'>{escape(user[0])}</a></li>"
                     html += '''
                                 </ul>
                                 <a href="/" class="back-btn">返回首頁</a>
